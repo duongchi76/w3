@@ -3,160 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENK Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cú pháp CSS - W3Schools</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        header {
-            background: black;
-            color: white;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
+            flex-direction: row;
+            background-color: #ffffff;
         }
-        .logo {
-            font-size: 24px;
+            .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #04AA6D;
+            overflow: hidden;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .topnav a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: inline-block;
             font-weight: bold;
         }
-        .highlight {
-            color: red;
+                .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #f1f1f1;
+            padding-top: 50px;
+            position: fixed;
+            overflow-y: auto;
         }
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 12px 20px;
             text-decoration: none;
             font-weight: bold;
         }
-        main {
+        .sidebar a:hover {
+            background: #ddd;
+        }
+                .content {
+            margin-left: 270px;
+            margin-top: 60px;
             padding: 20px;
+            flex-grow: 1;
         }
-        .news {
-            display: flex;
-            gap: 20px;
+        .example-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #04AA6D;
+            margin: 20px 0;
         }
-        .news article {
-            width: 23%;
+        .code-box {
+            background: #eeeeee;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            border-left: 4px solid #04AA6D;
         }
-        .news img {
-            width: 100%;
-            height: auto;
+        .button-test {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
         }
-        .ads {
-            margin-top: 20px;
+        .explanation {
+            background-color: #ffffcc;
+            padding: 10px;
+            border-left: 4px solid #ffcc00;
+            margin-top: 15px;
+        }
+        .quiz-container {
+            background-color: #2c3443;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .ads img {
+        .code {
+            background-color: #1e252f;
+            padding: 8px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+        }
+        .option {
+            background-color: #3d4553;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .submit-btn {
+            background-color: #00c853;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
             width: 100%;
-            max-width: 800px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .video-container img {
+            width: 70%;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">GEN<span class="highlight">K</span></div>
-        <nav>
-            <ul>
-                <li><a href="#">MOBILE</a></li>
-                <li><a href="#">TIN ICT</a></li>
-                <li><a href="#">INTERNET</a></li>
-                <li><a href="#">KHÁM PHÁ</a></li>
-                <li><a href="#">XEM - MUA - LUÔN</a></li>
-                <li><a href="#">XE</a></li>
-                <li><a href="#">APPS - GAME</a></li>
-                <li><a href="#">ĐỒ CHƠI SỐ</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="news">
-            <article>
-                <img src="https://genk.mediacdn.vn/zoom/250_155/139269124445442048/2025/2/3/avatar1738552584757-1738552585784620655335.jpg">
-                <p>Máy tính sinh học: Lời giải cho bài toán tiêu thụ năng lượng trong tính toán?</p>
-            </article>
-            <article>
-                <img src="https://genk.mediacdn.vn/zoom/250_155/139269124445442048/2025/2/3/inteligenta-artificiala-dezvoltata-cu-doar-30-de-dolari-800x450-1738546171281931845247-0-0-678-1085-crop-17385461772471834807801.png">
-                <p>Sao chép công nghệ lỗi của DeepSeek, các nhà nghiên cứu Mỹ tạo mô hình AI mới</p>
-            </article>
-            <article>
-                <img src="https://genk.mediacdn.vn/zoom/250_155/139269124445442048/2025/2/2/genk-pin-du-phong-magsafe-5000mah-cnl-9-1738497290556716525271-50-0-1330-2048-crop-17384978539411012431233.jpg">
-                <p>Lại là các pháp sư Trung Hoa: Bán pin dự phòng siêu mỏng nhẹ</p>
-            </article>
-            <article>
-                <img src="https://genk.mediacdn.vn/zoom/250_155/139269124445442048/2025/2/2/avatar1738495615364-1738495615981550789405.jpg">
-                <p>Không phải 6 triệu USD, DeepSeek cần tiêu tốn ít nhất 500 triệu USD để phát triển mô hình AI</p>
-            </article>
-            <article>
-                <img src="https://genk.mediacdn.vn/zoom/250_155/139269124445442048/2025/2/1/avatar1738398100226-1738398100498198822611.jpg">
-                <p>Những tranh cãi khoa học lớn nhất năm 2024: Từ kim tự tháp Ai Cập đến lỗ đen</p>
-            </article>
-        </section>
-        <section class="ads">
-            <img src="https://adi.admicro.vn/adt/adn/2025/03/banner-2rqcfdGRNA.jpeg" alt="Quảng cáo Xóa Cận">
-        </section>
-    </main>
-    <main>
-        <div class="content">
-            <h1 class="article-title">40 năm nhìn lại Windows 1.0: Thất bại tạo nên thành công cho hệ điều hành phổ biến nhất ngày nay</h1>
-            <p class="article-meta">TUẤN NGUYỄN, 1 NĂM TRƯỚC</p>
-            <div class="social-share">
-                <button>👍 Thích 8</button>
-                <button>📩 Chia sẻ</button>
-            </div>
-            <p><strong>Tính đến nay, Windows 1.0 đã gần 40 năm tuổi và nó đã giúp ích rất nhiều cho Microsoft trong công cuộc chinh phục thị trường hệ điều hành máy tính.</strong></p>
-            <ul>
-                <li>Thế giới di động cân nhắc đóng 200 cửa hàng, Chủ tịch Nguyễn Đức Tài từng có quan điểm về vấn đề này ra sao vào 7 tháng trước?</li>
-                <li>Thị trường giao đồ ăn tại Việt Nam khốc liệt đến mức nào mà BAEMIN phải ngậm ngùi rút lui?</li>
-                <li>Trong khi Huawei, Xiaomi gấp rút làm xe ô tô điện, Apple thờ ơ; iCar vẫn chỉ là tin đồn</li>
-                <li>BAEMIN khiến bỏ rơi khỏi Việt Nam khiến dân tình tiếc nuối vì mất đi một ứng dụng giao đồ ăn quen thuộc</li>
-            </ul>
+        <div class="topnav">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JAVASCRIPT</a>
+            <a href="#">SQL</a>
+            <a href="#">PYTHON</a>
+            <a href="#">JAVA</a>
+            <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">C#</a>
         </div>
-        <aside class="sidebar">
-            <div class="ads">
-                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/anh-cover-1-1700880668257-1700880669711755893484.jpg">
+        
+        <div class="sidebar">
+            <a href="#">CSS Trang Chủ</a>
+            <a href="#">Giới thiệu về CSS</a>
+            <a href="#">Cú pháp CSS</a>
+            <a href="#">Bộ chọn CSS</a>
+            <a href="#">Bình luận CSS</a>
+            <a href="#">CSS làm thế nào để</a>
+            <a href="#">Màu sắc CSS</a>
+            <a href="#">Nền CSS</a>
+            <a href="#">Đường viền CSS</a>
+            <a href="#">Lề CSS</a><a href="#">SQL</a>
+            <a href="#">Đệm CSS</a>
+            <a href="#">Chiều cao / Chiều rộng CSS</a>
+            <a href="#">Phác thảo CSS</a>
+            <a href="#">Văn bản CSS</a>
+            <a href="#">Phông chữ CSS</a>
+        </div>
+        
+        <div class="content">
+            <h1>Cú pháp CSS</h1>
+            <p>Một quy tắc CSS bao gồm một bộ chọn và một khối khai báo.</p>
+            <div class="code-box">
+                h1 { color: blue; font-size: 12px; }
             </div>
-        </aside>
-        <p>Microsoft ra mắt Windows 1.0 vào tháng 11 năm 1983. Windows 1.0 đánh dấu sự bắt đầu cho thương hiệu Windows vẫn thống trị thị trường hệ điều hành máy tính ngày nay. Chúng ta hãy cùng nhìn lại sự ra mắt mang tính lịch sử của Microsoft Windows 1.0 sau 40 năm.</p>
-        <h3>Apple Lisa: Phát súng bắt đầu cuộc đua thay đổi hệ điều hành máy tính</h3>
-        <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880671623164687037.jpg">
-        <p>Steve Jobs bên cạnh chiếc Apple Lisa</p>
-        <p>Vào đầu những năm 1980, hệ điều hành máy tính không hề giống với những gì chúng ta biết hiện nay. Chúng hoạt động dựa trên các dòng lệnh, sử dụng thông qua cách nhập lệnh văn bản. Tuy nhiên, một cuộc cách mạng GUI (giao diện đồ họa người dùng) đang diễn ra trong ngành công nghệ. Apple đã tự đặt mình vào vị trí dẫn đầu trong cuộc cách mạng đó khi cho ra mắt Lisa vào đầu năm 1983. Đó là một trong những chiếc PC đầu tiên có giao diện người dùng đồ họa, cho phép người dùng mở các chương trình và tập tin bằng chuột.</p>
-        <p>Tuy nhiên, vấn đề với Apple Lisa là nó quá cao cấp. Đó là chiếc máy tính đi trước thời đại với thông số kỹ thuật rất cao đối với một chiếc PC đầu những năm 1980. Điều này khiến Lisa trở nên cực kỳ đắt đỏ, với giá khởi điểm xấp xỉ 10.000 USD. Hầu hết người dùng sẽ chọn PC IBM rẻ hơn.</p>
-        <h3>Microsoft ra mắt Windows 1.0 tại COMDEX</h3>
-        <p>Tuy nhiên, Lisa vẫn khiến nhiều người trong ngành công nghệ phải chú ý nhờ hệ điều hành giao diện đồ họa mang tính cách mạng (tiền thân của Macintosh). Để đáp lại Lisa, Microsoft đã bắt đầu dự án hệ điều hành GUI có tên mã là Interface Manager (Trình quản lý giao diện). Bill Gates công bố Windows 1.0 tại khách sạn Plaza ở New York vào ngày 10 tháng 11 năm 1983.</p>
-        <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880673217889914177.jpg">
-        <p>Bill Gates công bố dự án hệ điều hành mới</p>
-        <p>Khi Microsoft công bố Windows 1.0, công ty cho biết đây là phần mở rộng của MS-DOS. Microsoft kỳ vọng Windows 1.0 sẽ mở rộng môi trường phát triển phần mềm MS-DOS bằng cách cho phép các nhà phát triển tạo ra nhiều chương trình có điều hướng đồ họa hơn. Do đó, hệ điều hành Windows đầu tiên chỉ giống như một bổ sung cho MS-DOS hơn là một sự thay thế.</p>
-        <p>Microsoft đã trình diễn bản preview Windows 1.0 đầu tiên tại COMDEX (triển lãm thương mại máy tính) vào tháng 11 năm 1983. Thế giới lần đầu tiên nhìn thấy hệ điều hành Windows trên màn hình màu xanh lá cách đây 40 năm. Nền tảng Windows đầu tiên cho phép người dùng truy cập nhiều chương trình đang chạy bằng cách nhấp vào biểu tượng của chúng.</p>
-        <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806748721155972762.jpg">
-        <i>Giao diện Windows 1.01</i>
-        <p>Windows 1.0 cũng đi kèm với một số ứng dụng mà người dùng ngày nay đã quen thuộc. Notepad, Paint và Calc (Máy tính) là ba chương trình đi kèm với Windows 1.0 và vẫn là một phần của dòng hệ điều hành Windows kể từ đó. Người dùng cũng có thể chọn các chương trình Write (trình xử lý văn bản), Đồng hồ, Reversi (trò chơi), Clipboard và Lịch từ MS-DOS Executive.</p>
-        <img src="https://adi.admicro.vn/adt/cpc/tvcads/2025/03/640x360a1_174123854220.png">
-<h3>Cuộc cách mạng Windows thật sự bắt đầu vào năm 1995</h3>
-<p>Microsoft đã trì hoãn việc phát hành Windows 1.0 nhằm thực hiện một số sửa đổi và cải tiến bổ sung. Lịch sử của Windows bắt đầu khi phiên bản Windows 1.0 chính thức đầu tiên xuất hiện vào tháng 11 năm 1985, hai năm sau khi Microsoft công bố nó. Microsoft ra mắt Windows 1.0 tại Mỹ với mức giá phải chăng là 99 USD.</p>
-<img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806767101268580880.jpg">
-<p>Tuy nhiên, đáng tiếc là người dùng thực sự không ấn tượng bởi Windows 1.0. Hệ điều hành Windows đầu tiên có một số vấn đề về hiệu suất và khả năng tương thích phần mềm. Nhiều đánh giá thời đó nhận xét Windows 1.0 là một sự thất bại. Cuối cùng, hầu hết người dùng thích gắn bó với các lệnh MS-DOS trong suốt những năm còn lại của thập niên 1980.</p>
-<p>PC của những năm 1980 chưa hoàn toàn sẵn sàng cho hệ điều hành GUI. Hệ điều hành đồ họa yêu cầu sức mạnh nặng nề hơn khiến phần cứng hạn chế của hầu hết PC thời điểm đó gặp vấn đề hiệu năng. Phần cứng PC cần khoảng 7 đến 10 năm để phát triển trước khi cuộc cách mạng Windows thực sự bắt đầu vào năm 1995.</p>
-<p>Windows cuối cùng đã đạt được thành công lớn vào năm 1995. Việc thêm menu Start và thanh tác vụ vào Windows 95 đã tạo nên sự khác biệt, có thể nói Windows 95 chính là phiên bản đã giúp định hình Windows mà chúng ta biết ngày nay. PC vào giữa những năm 1990 cũng được trang bị tốt hơn nhiều để xử lý nền tảng GUI. Sau đó, dòng hệ điều hành Windows đã thống trị thị trường máy tính để bàn và MS-DOS dần biến mất.</p>
-<img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880678825818101052.jpg">
-<p>Ngày nay, khó có thể tưởng tượng một hệ điều hành thiếu những yếu tố của Windows 95, ở một mức độ nào đó, chúng ta có thể thấy chúng ngay cả trên các nền tảng cạnh tranh như các bản phân phối dựa trên Linux, macOS và thậm chí cả Android.</p>
-<h3>Windows đã chiến thắng trong cuộc chiến hệ điều hành đồ họa</h3>
-<p>Tuy Windows 95 là phiên bản thật sự tạo nên thành công, nhưng sự ra mắt của Windows 1.0 vào tháng 11 năm 1983 chắc chắn là khởi đầu, tạo nền tảng cho những hệ điều hành tốt hơn mà sau này Microsoft mang đến cho PC, giúp chúng trở thành những cỗ máy dễ tiếp cận hơn nhiều.</p>
-<img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806805711571495043.jpg">
-<p>Bill Gates từng tuyên bố Windows là tương lai khi Microsoft trình làng Windows 1.0, hệ điều hành đồ họa đầu tiên của mình và lời tiên tri đó đã trở thành sự thật.</p>
-
-    </main>
+            <p>Bộ chọn trỏ tới phần tử HTML mà bạn muốn định dạng.</p>
+            <p>Khối khai báo chứa một hoặc nhiều khai báo được phân tách bằng dấu chấm phẩy.</p>
+            <p>Mỗi khai báo bao gồm tên thuộc tính CSS và giá trị, được phân tách bằng dấu hai chấm.</p>
+            <p>Nhiều khai báo CSS được phân tách bằng dấu chấm phẩy và các khối khai báo được bao quanh bởi dấu ngoặc nhọn.</p>
+        
+        <div class="example-box">
+            <h2>Ví dụ</h2>
+            <p>Trong ví dụ này, tất cả các phần tử <code>&lt;p&gt;</code> sẽ được căn giữa và có màu chữ đỏ:</p>
+            <div class="code-box">
+                p { <br>
+                &nbsp;&nbsp;color: red;<br>
+                &nbsp;&nbsp;text-align: center;<br>
+                }
+            </div>
+            <a href="#" class="button-test">Hãy tự mình thử »</a>
+        </div>
+        
+        <h2>Ví dụ giải thích</h2>
+        <ul>
+            <li><code>p</code> là một bộ chọn trong CSS (nó trỏ đến phần tử HTML mà bạn muốn định dạng: <code>&lt;p&gt;</code>).</li>
+            <li><code>color</code> là một thuộc tính, và <code>red</code> là giá trị thuộc tính.</li>
+            <li><code>text-align</code> là một thuộc tính, và <code>center</code> là giá trị thuộc tính.</li>
+        </ul>
+        
+        <div class="explanation">
+            Bạn sẽ tìm hiểu thêm về bộ chọn CSS và thuộc tính CSS trong các chương tiếp theo!
+        </div>
+        <div class="quiz-container">
+            <h2>Bài tập</h2>
+            <p class="question">Trong ví dụ sau, phần nào là bộ chọn?</p>
+            <p class="code">p { color: red; }</p>
+        
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="answer" value="p"> p
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="code"> { color: red; }
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="color"> color
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="red"> red
+                </label>
+            </div>
+            <button class="submit-btn">Gửi câu trả lời »</button>
+    </div>
+    <div class="video-container">
+        <h2>Video: Cú pháp CSS</h2>
+        <img src="https://www.w3schools.com/css/images/css_syntax.webp">
 </body>
 </html>
